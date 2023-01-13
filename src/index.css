@@ -5,9 +5,103 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #1f242e;
+  font-size: 0.28rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+form,
+input,
+textarea,
+select,
+span,
+table,
+tr,
+th,
+td,
+img,
+blockquote,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+#root {
+  height: 100%;
+}
+
+/* 0.5 px 细线 */
+.border-b-thin,
+.border-t-thin,
+.border-all-thin {
+  position: relative;
+}
+
+.border-b-thin::after,
+.border-t-thin::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform: scaleY(0.4);
+  border-bottom: 1px solid #ebebeb;
+}
+
+.border-b-thin::after {
+  bottom: 0;
+}
+
+.border-t-thin::before {
+  top: 0;
+}
+
+.border-all-thin::after {
+  position: absolute;
+  box-sizing: border-box;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  border: solid 1px #e6e6e6;
+  transform-origin: left top;
+  transform: scale(0.5);
+}
+
+/* 文字单行省略 */
+.textEll {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
