@@ -56,7 +56,7 @@ const Confirm = {
       const topVal = document.body.scrollTop || document.documentElement.scrollTop;
       console.log('禁止滚动', topVal)
       document.body.style.position = "fixed";
-      document.body.style.top = `${-topVal}px`
+      document.body.style.top = `${-topVal}px`;
     }
 
     // 恢复背景滚动
@@ -65,12 +65,12 @@ const Confirm = {
       console.log('恢复滚动', topVal)
       document.body.style.position = "static";
       document.body.style.top = '0';
-      window.scrollTo(0, topVal)
+      window.scrollTo(0, topVal);
     }
     
     const handleClose = () => {
       document.body.removeChild(container);
-      recoverScroll()
+      recoverScroll();
     }
 
     ReactDOM.render(<ConfirmModal {...params} handleClose={handleClose} />, container);
